@@ -7,6 +7,7 @@ body {
     background-color: white;
     font-size: 14pt;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 .header__output {
@@ -43,6 +44,10 @@ body {
     width: 184px;
     height: 325px;
 }
+#dunno {
+    width: 184px;
+    height: 325px;
+}
 
 .input-wrapper {
     margin: 2.1em auto 0;
@@ -66,8 +71,9 @@ body {
     }
 
 .footer__speaker-wrapper {
-    margin: 2.65em auto 0;
-    text-align: center;
+    position: absolute;
+    bottom: 4em;
+    left: 48%;
 }
 
 .footer__speaker-button {
@@ -100,13 +106,13 @@ body {
 }
 
 .footer__speaker-button[data-mic-on="false"]:after {
-    background-image: url('./mic.svg');
+    background-image: url('mic.svg');
 }
 .footer__speaker-button[data-mic-on="true"]:after {
-    background-image: url('./mic-off.svg');
+    background-image: url('mic-off.svg');
 }
 .footer__speaker-button[data-mic-on="received"]:after {
-    background-image: url('./tick.svg');
+    background-image: url('tick.svg');
     width: 38px;
     height: 29px;
     left: 2em;

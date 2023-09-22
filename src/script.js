@@ -7,17 +7,19 @@ micBtn.addEventListener('click', () => {
     let isSpeaking=micBtn.getAttribute('data-mic-on');
     if(isSpeaking === 'false') {
         speech.style.display='block';
+        inputText.style.visibility='none';
         inputText.style.display='none';
         micBtn.setAttribute('data-mic-on','true');
+        setTimeout(function() {
+            headerNotification.setAttribute('data-asked','true');
+            headerNotification.innerText='Незнайка, а почему все переверну...';
+        }, 750);
     }
     if(isSpeaking === 'true') {
-        speech.style.display='none';
-        inputText.style.display='block';
-        inputText.style.visibility='visible';
-        
-        headerNotification.setAttribute('data-asked','true');
-        headerNotification.innerText='Незнайка, а почему все переверну...';
+        speech.style.display='none';        
+
         setTimeout(function() {
+            inputText.style.visibility='visible';
             headerNotification.innerText='Это, наверно, не Луна перевернулась, а мы сами перевернулись.';
             micBtn.setAttribute('data-mic-on','received');
         }, 1500);
