@@ -1,1 +1,3 @@
-# neznaika-for-eksmo\
+# neznaika-for-eksmo
+
+A project for hackaton
